@@ -8,7 +8,8 @@ This Zimlet for Zimbra provides functionality for classifying emails according t
 - The TLP level of an email can be selected from a dropdown list in a dialog window that opens upon clicking the TLP button.
 - Depending on the selected TLP level, the email subject and body are appropriately formatted.
 - Supports both HTML and plain text email formats.
-- TLP:RED adds [Vertraulich] to Subject as well, which forces HIN-Mail-Gateway to enforce encryption when sending eMail, while keeping TLP-Flag
+- [TLP:RED] adds additional [Vertraulich] to Subject as well, which forces HIN-Mail-Gateway to enforce encryption when sending eMail, while keeping TLP-Flag. You can configure this within the properties file.
+- Switching of TLP-Level while editing is supported.
 
 ## Installation
 

@@ -1,4 +1,4 @@
-<zimlet name="com_zimbra_tlp" version="1.0.5" label="${msg.TLPZimlet_label}" description="${msg.TLPZimlet_descr}">
+<zimlet name="com_zimbra_tlp" version="1.0.6" label="${msg.TLPZimlet_label}" description="${msg.TLPZimlet_descr}">
    <summary>First.org Traffic Light Protocol (TLP) sending options. German Translation. Modified for HIN Secure Gateway</summary>
    <include>com_zimbra_tlp.js</include>
    <handlerObject>com_zimbra_tlp_HandlerObject</handlerObject>
