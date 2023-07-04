@@ -77,7 +77,7 @@ function(controller) {
    var composeView = appCtxt.getCurrentView();
    var mode = composeView.getHtmlEditor().getMode();   
    var content = composeView.getHtmlEditor().getContent();
-   var contentRegex = /<div><span style=".*">\[TLP:.*\] .*<\/span><\/div>/m
+   var contentRegex = /<div><span style=".*?">\[TLP:.*?\] .*?<\/span><\/div>/g
    content = content.replace(contentRegex, "");
    contentRegex = /\[TLP:.*\] .*\n/m
    content = content.replace(contentRegex, "");
@@ -87,13 +87,13 @@ function(controller) {
       switch (document.getElementById('TLPZimletsensitivity').value)
       {
          case "[TLP:RED]":
-            composeView.getHtmlEditor().setContent(zimletInstance.getMessage('TLPZimlet_redDescription') + "\r\n" + content);
+            composeView.getHtmlEditor().setContent(zimletInstance.getMessage('TLPZimlet_redDescription').replace(/<br>/g, "\r\n") + "\r\n" + content);
             break;
          case "[TLP:AMBER]":
-            composeView.getHtmlEditor().setContent(zimletInstance.getMessage('TLPZimlet_amberDescription') + "\r\n" + content);
+            composeView.getHtmlEditor().setContent(zimletInstance.getMessage('TLPZimlet_amberDescription').replace(/<br>/g, "\r\n") + "\r\n" + content);
             break;
          case "[TLP:GREEN]":
-            composeView.getHtmlEditor().setContent(zimletInstance.getMessage('TLPZimlet_greenDescription') + "\r\n" + content);
+            composeView.getHtmlEditor().setContent(zimletInstance.getMessage('TLPZimlet_greenDescription').replace(/<br>/g, "\r\n") + "\r\n" + content);
             break;
          case "[TLP:WHITE]":
             composeView.getHtmlEditor().setContent(content);   
